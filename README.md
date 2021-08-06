@@ -4,3 +4,5 @@
 # constductor
 
 [Conductor](https://netflix.github.io/conductor/) x [React Flow](https://reactflow.dev/)
+
+![screenshot](doc/screenshot.png)

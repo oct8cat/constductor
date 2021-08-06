@@ -1,0 +1,7 @@
+.react-flow__node-DECISION {
+  background-color: yellow !important;
+}
+
+.react-flow__node-WAIT {
+  background-color: gray !important;
+}

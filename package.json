@@ -1,0 +1,47 @@
+{
+  "name": "constductor",
+  "version": "1.0.0",
+  "main": "build/src/index.js",
+  "scripts": {
+    "build": "npm run build:ts && npm run build:css",
+    "build:ts": "tsc -b src",
+    "build:css": "mkdir -p build/src && cp src/index.css build/src/index.css",
+    "watch": "npm run watch:ts & npm run watch:css",
+    "watch:ts": "tsc -b src -w",
+    "watch:css": "nodemon -w src -e css --exec npm run build:css",
+    "clean": "rm -rf build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "build"
+  ],
+  "keywords": [],
+  "author": "Sergey Elsukov <oct8cat@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/uuid": "^8.3.1",
+    "nodemon": "^2.0.12",
+    "react": "^17.0.2",
+    "react-flow-renderer": "^9.6.6",
+    "typescript": "^4.3.5"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-flow-renderer": "^9.6.6"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oct8cat/constductor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oct8cat/constductor/issues"
+  },
+  "homepage": "https://github.com/oct8cat/constductor#readme",
+  "description": "Conductor x React Flow"
+}

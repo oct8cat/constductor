@@ -1,6 +1,6 @@
 {
   "name": "constductor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "build/src/index.js",
   "scripts": {
     "build": "npm run build:ts && npm run build:css",

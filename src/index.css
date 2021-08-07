@@ -3,5 +3,14 @@
 }
 
 .react-flow__node-WAIT {
-  background-color: gray !important;
+  background-color: lightgrey !important;
+}
+
+.react-flow__controls {
+  background-color: lightgrey !important;
+  padding: 10px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  left: auto;
 }

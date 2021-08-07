@@ -10,7 +10,10 @@ export type TTaskType<T> = {
   id: string;
   taskReferenceName: string;
   name: string;
+  inputParameters?: TTaskInputParameters;
 } & T;
+
+export type TTaskInputParameters = Record<string, any>;
 
 export type TSimpleTask = TTaskType<{
   type: ETaskType.SIMPLE;

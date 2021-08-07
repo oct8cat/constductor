@@ -2,7 +2,9 @@ import { Edge, Elements, isNode, Node, XYPosition } from "react-flow-renderer";
 import { TTask, ETaskType } from "./types";
 import { v4 as createId } from "uuid";
 
-export const findLastTaskNode = (nodes: Node[]) => {
+export { createId };
+
+export const findBottomNode = (nodes: Node[]) => {
   return nodes.reduce(
     (acc, node) => (acc.position.y > node.position.y ? acc : node),
     nodes[0]
@@ -51,11 +53,11 @@ export const tasksToElements = (
 };
 
 export const tasksToNodes = (tasks: TTask[], position: XYPosition): Node[] => {
-  return tasks.reduce<Node[]>((acc, task, index) => {
+  return tasks.reduce<Node[]>((acc, task) => {
     const nodes = acc.filter(isNode);
     const y = !nodes.length
       ? position.y
-      : findLastTaskNode(nodes).position.y + 100;
+      : findBottomNode(nodes).position.y + 100;
     return acc.concat(taskToNodes(task, { ...position, y }));
   }, []);
 };

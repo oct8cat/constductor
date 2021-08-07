@@ -1,12 +1,12 @@
 export const Input: React.FC<{
   value: string;
   onChange: (value: string) => void;
-  label: string;
+  label?: string;
 }> = ({ value, onChange, label }) => {
   return (
     <div>
       <label htmlFor="">
-        <div>{label}</div>
+        {label && <div>{label}</div>}
         <input
           type="text"
           value={value}
